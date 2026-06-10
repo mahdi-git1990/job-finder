@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جاب فایندر</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body
+    class="bg-background-light text-[#111418] dark:bg-background-dark dark:text-white font-sans min-h-screen flex flex-col overflow-x-hidden">
+
+    <!-- bavbar -->
+
+    <nav class="sticky top-0 z-50 w-full bg-white dark:bg-[#1a2632] border-b border-gray-200 dark:border-[#2a3b4d]">
+
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-[65px]">
+                <!-- logo -->
+                <div class="flex items-center gap-2">
+                    <div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+                        <span class="material-symbols-outlined">work</span>
+                    </div>
+                    <span class="text-xl font-bold">جاب فایندر</span>
+                </div>
+
+                <!-- Desktop menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#" class="text-sm font-medium hover:text-primary">فرصت های شغلی</a>
+                    <a href="#" class="text-sm font-medium hover:text-primary">شرکت ها</a>
+                    <a href="#" class="text-sm font-medium hover:text-primary">وبلاگ</a>
+                    <a href="#" class="text-sm font-medium hover:text-primary">رزومه ساز</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="flex items-center gap-4">
+                    <a href="#"
+                        class="hidden md:block text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">ورود
+                        / ثبت نام</a>
+                    <button
+                        class="bg-primary hover:bg-primary-dark text-white text-sm font-bold px-4 py-2 rounded-lg flex items-center gap-2 shadow-md hover:shadow-lg">
+                        <span class="material-symbols-outlined text-[20px]">add_circle</span>
+                        <span>ثبت آگهی</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+
+    <header class="bg-white dark:bg-[#1a2632] py-16 lg:py-24 overflow-x-hidden ">
+        <div class="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            <div
+                class="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/30 text-primary px-3 py-1 rounded-full text-xs font-bold mb-6 border border-blue-100 dark:border-blue-800 ">
+                <span class="relative flex size-2">
+                    <span class="animate-ping absolute inline-flex size-full rounded-full bg-primary opacity-75"></span>
+                    <span class="inline-flex rounded-full size-2 bg-primary"></span>
+                </span>
+                بیش از 10,000 موقعیت شغلی فعال
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-[#111418] dark:text-white mb-6">شغل رویایی تان
+                را <span class="text-primary">همین امروز</span> پیدا کنید</h1>
+            <p class="text-lg text-gray-600 dark:text-gray-300 mb-10 max-w-[690px]">بهترین فرصت های شغلی در معتبر ترین
+                شرکت های ایران را جست و جو کنید و آینده شغلی خود را بسازید.</p>
+
+            <!-- search-box -->
+
+            <div
+                class="w-full max-w-4xl bg-white dark:bg-[#1f2b37] p-3 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col md:flex-row gap-3">
+                <div class="flex-1 relative group ">
+                    <div
+                        class="absolute inset-y-0 right-3 flex items-center pointer-events-none text-gray-400 group-focus-within:text-primary">
+                        <span class="material-symbols-outlined">search</span>
+                    </div>
+                    <input type="text" placeholder="عنوان شغلی یا شرکت ..."
+                        class="w-full h-12 pr-10 pl-4 bg-gray-50 dark:bg-[#2a3b4d] border-transparent focus:border-primary focus:outline-primary focus:ring-0  rounded-lg text-sm dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500">
+                </div>
+                <div class="flex-1 relative group">
+                    <div
+                        class="absolute inset-y-0 right-3 flex items-center pointer-events-none text-gray-400 group-focus-within:text-primary">
+                        <span class="material-symbols-outlined">category</span>
+                    </div>
+                    <select
+                        class="w-full h-12 pr-10 pl-4 bg-gray-50 dark:bg-[#2a3b4d] border-transparent focus:border-primary focus:outline-primary focus:ring-0 appearance-none  rounded-lg text-sm dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500">
+                        <option value="" disabled selected>دسته بندی شغلی</option>
+                        <option value="dev">برنامه نویسی</option>
+                        <option value="design">گرافیک</option>
+                        <option value="marketing">مارکتینگ</option>
+                        <option value="accounting">حسابداری</option>
+                    </select>
+                    <div class="absolute inset-y-0 left-3 flex items-center pointer-events-none text-gray-400">
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+                    </div>
+                </div>
+                <div class="flex-1 relative group">
+                    <div
+                        class="absolute inset-y-0 right-3 flex items-center pointer-events-none text-gray-400 group-focus-within:text-primary">
+                        <span class="material-symbols-outlined">add_location</span>
+                    </div>
+                    <select
+                        class="w-full h-12 pr-10 pl-4 bg-gray-50 dark:bg-[#2a3b4d] border-transparent focus:border-primary focus:outline-primary focus:ring-0 appearance-none  rounded-lg text-sm dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500">
+                        <option value="" disabled selected>همه شهر ها</option>
+                        <option value="tehran">تهران</option>
+                        <option value="rasht">رشت</option>
+                        <option value="mashad">مشهد</option>
+                        <option value="esfahan">اصفهان</option>
+                    </select>
+                    <div class="absolute inset-y-0 left-3 flex items-center pointer-events-none text-gray-400">
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+                    </div>
+                </div>
+
+                <button
+                    class="bg-primary hover:bg-primary-dark text-white font-bold h-12 px-8 rounded-lg shadow-blue-200 dark:shadow-none flex items-center justify-center gap-2 w-full md:w-auto">
+                    <span>جستجو</span>
+                </button>
+
+            </div>
+            <div class="mt-6 flex flex-wrap justify-center gap-3 text-sm text-gray-500 dark:text-gray-400">
+                <span>جست و جو های محبوب:</span>
+                <a href="#" class="text-primary hover:underline">برنامه نویس react</a>
+                <span class="text-gray-300 dark:text-gray-600">◽</span>
+                <a href="#" class="text-primary hover:underline">مدیر محصول</a>
+                <span class="text-gray-300 dark:text-gray-600">◽</span>
+                <a href="#" class="text-primary hover:underline">حسابدار ارشد</a>
+                <span class="text-gray-300 dark:text-gray-600">◽</span>
+                <a href="#" class="text-primary hover:underline">کارشناس فروش</a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- popular categories -->
+
+    <section class="py-16 bg-background-ligt dark:bg-background-dark">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold mb-8 text-[#111418] dark:text-white">دسته بندی های محبوب</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- category card 1 -->
+                <a href="#"
+                    class="group flex flex-col p-6 bg-white dark:bg-[#1a2632] rounded-xl border border-gray-100 dark:border-gray-700 hover:border-primary/50 hover:shadow-lg transition-all">
+                    <div
+                        class="size-12 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">code</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">برنامه نویسی</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">1230 موقعیت شغلی</p>
+                </a>
+                <!-- category card 2 -->
+                <a href="#"
+                    class="group flex flex-col p-6 bg-white dark:bg-[#1a2632] rounded-xl border border-gray-100 dark:border-gray-700 hover:border-primary/50 hover:shadow-lg transition-all">
+                    <div
+                        class="size-12 rounded-lg bg-orange-50 dark:bg-orange-900/20 text-orange-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">campaign</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">مارکتینگ و فروش</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">850 موقعیت شغلی</p>
+                </a>
+                <!-- category card 3 -->
+                <a href="#"
+                    class="group flex flex-col p-6 bg-white dark:bg-[#1a2632] rounded-xl border border-gray-100 dark:border-gray-700 hover:border-primary/50 hover:shadow-lg transition-all">
+                    <div
+                        class="size-12 rounded-lg bg-violet-50 dark:bg-violet-900/20 text-violet-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">brush</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">طراحی و هنر</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">420 موقعیت شغلی</p>
+                </a>
+                <!-- category card 4 -->
+                <a href="#"
+                    class="group flex flex-col p-6 bg-white dark:bg-[#1a2632] rounded-xl border border-gray-100 dark:border-gray-700 hover:border-primary/50 hover:shadow-lg transition-all">
+                    <div
+                        class="size-12 rounded-lg bg-green-50 dark:bg-green-900/20 text-green-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">calculate</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">مالی و حسابداری</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">600 موقعیت شغلی</p>
+                </a>
+                <!-- category card 5 -->
+                <a href="#"
+                    class="group flex flex-col p-6 bg-white dark:bg-[#1a2632] rounded-xl border border-gray-100 dark:border-gray-700 hover:border-primary/50 hover:shadow-lg transition-all">
+                    <div
+                        class="size-12 rounded-lg bg-red-50 dark:bg-red-900/20 text-red-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">school</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">آموزش</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">200 موقعیت شغلی</p>
+                </a>
+                <!-- category card 6 -->
+                <a href="#"
+                    class="group flex flex-col p-6 bg-white dark:bg-[#1a2632] rounded-xl border border-gray-100 dark:border-gray-700 hover:border-primary/50 hover:shadow-lg transition-all">
+                    <div
+                        class="size-12 rounded-lg bg-green-50 dark:bg-green-900/20 text-green-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">engineering</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">مهندسی</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">350 موقعیت شغلی</p>
+                </a>
+                <!-- category card 7 -->
+                <a href="#"
+                    class="group flex flex-col p-6 bg-white dark:bg-[#1a2632] rounded-xl border border-gray-100 dark:border-gray-700 hover:border-primary/50 hover:shadow-lg transition-all">
+                    <div
+                        class="size-12 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">support_agent</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">پشتیبانی مشتریان</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">550 موقعیت شغلی</p>
+                </a>
+                <!-- category card 8 -->
+                <a href="#"
+                    class="group flex flex-col p-6 bg-white dark:bg-[#1a2632] rounded-xl border border-gray-100 dark:border-gray-700 hover:border-primary/50 hover:shadow-lg transition-all">
+                    <div
+                        class="size-12 rounded-lg bg-pink-50 dark:bg-pink-900/20 text-pink-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">account_circle</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">منابع انسانی</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">180 موقعیت شغلی</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- featured VIP jobs -->
+
+    <section class="py-16 bg-white dark:bg-[#1a2632]">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold text-[#111418] dark:text-white flex items-center gap-2">
+                    <span class="material-symbols-outlined text-amber-500">star</span>
+                    فرصت های شغلی ویژه
+                </h2>
+                <a href="#"
+                    class="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">مشاهده همه
+                    <span class="material-symbols-outlined text-sm">arrow_back</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- VIP card 1 -->
+                <div
+                    class="bg-white dark:bg-[#1f2b37] rounded-xl p-6 border border-amber-200 dark:border-amber-900 shadow-sm relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 bg-amber-400 text-white text-xs font-bold px-3 py-1 rounded-bl-lg z-10">
+                        ویژه</div>
+                    <div class="flex items-start justify-between mb-4 ">
+                        <div
+                            class="size-14 rounded-lg bg-gray-50 dark:bg-gray-800 p-2 border border-gray-100 dark:border-gray-700">
+                            <!-- logo for company -->
+                            <svg class="w-full h-full text-indigo-600 dark:text-indigo-400" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span
+                            class="bg-blue-50 dark:bg-blue-900/30 text-primary text-xs font-medium px-2 py-1 rounded ">تمام
+                            وقت</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">برنامه نویس ارشد فرانت
+                        اند</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">شرکت فناوری داده پرداز</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span
+                            class="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800 px-2 py-1 rounded ">
+                            <span class="material-symbols-outlined text-[16px]">location_on</span>
+                            تهران
+                        </span>
+                        <span
+                            class="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800 px-2 py-1 rounded ">
+                            <span class="material-symbols-outlined text-[16px]">payments</span>
+                            35 - 50 میلیون
+                        </span>
+                        <span
+                            class="flex items-center gap-1 text-xs text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded">
+                            <span class="material-symbols-outlined text-[16px]">wifi</span>
+                            ترکیبی / هیبرید
+                        </span>
+
+                    </div>
+                    <button
+                        class="w-full py-2.5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white transition-all text-sm">مشاهده
+                        و ارسال رزومه </button>
+                </div>
+                <!-- VIP card 2 -->
+                <div
+                    class="bg-white dark:bg-[#1f2b37] rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm relative overflow-hidden group hover:border-primary/30 transition-colors">
+                    <div class="flex items-start justify-between mb-4">
+                        <div
+                            class="size-14 rounded-lg bg-gray-50 dark:bg-gray-800 p-2 border border-gray-100 dark:border-gray-700">
+                            <svg class="w-full h-full text-red-600 dark:text-red-400" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span
+                            class="bg-blue-50 dark:bg-blue-900/30 text-primary text-xs font-medium px-2 py-1 rounded">پروژه‌ای</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">طراح رابط کاربری
+                        (UI/UX)</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">آژانس دیجیتال خلاق</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span
+                            class="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800 px-2 py-1 rounded">
+                            <span class="material-symbols-outlined text-[16px]">location_on</span>
+                            دورکاری
+                        </span>
+                        <span
+                            class="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800 px-2 py-1 rounded">
+                            <span class="material-symbols-outlined text-[16px]">payments</span>
+                            توافقی
+                        </span>
+                        <span
+                            class="flex items-center gap-1 text-xs text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded">
+                            <span class="material-symbols-outlined text-[16px]">home</span>
+                            ریموت
+                        </span>
+                    </div>
+                    <button
+                        class="w-full py-2.5 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all text-sm">
+                        مشاهده و ارسال رزومه
+                    </button>
+                </div>
+                <!-- VIP card 3 -->
+                <div
+                    class="bg-white dark:bg-[#1f2b37] rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm relative overflow-hidden group hover:border-primary/30 transition-colors">
+                    <div class="flex items-start justify-between mb-4">
+                        <div
+                            class="size-14 rounded-lg bg-gray-50 dark:bg-gray-800 p-2 border border-gray-100 dark:border-gray-700">
+                            <svg class="w-full h-full text-green-600 dark:text-green-400" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M16 6l2.29-2.29-4.88-4.88-4 4L2 2.81 0.71 4.1 6 9.39l6.3-6.3L16 6zm3.41 6.88L15.5 12.8 9.21 6.5 6 9.71l6.3 6.3 3.11-3.11L19.41 16l2.29-2.29-2.29-2.29zM20.59 19.41l-2.29 2.29 4.88 4.88 4-4L22 17.81l-1.41-1.29-2.29 2.29z">
+                                </path> <!-- Abstract shape -->
+                            </svg>
+                        </div>
+                        <span
+                            class="bg-blue-50 dark:bg-blue-900/30 text-primary text-xs font-medium px-2 py-1 rounded">تمام
+                            وقت</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">مدیر محصول (Product
+                        Manager)</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">استارتاپ فین‌تک</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span
+                            class="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800 px-2 py-1 rounded">
+                            <span class="material-symbols-outlined text-[16px]">location_on</span>
+                            اصفهان
+                        </span>
+                        <span
+                            class="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800 px-2 py-1 rounded">
+                            <span class="material-symbols-outlined text-[16px]">payments</span>
+                            40 - 60 میلیون </span>
+                        <span
+                            class="flex items-center gap-1 text-xs text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded">
+                            <span class="material-symbols-outlined text-[16px]">business</span>
+                            حضوری
+                        </span>
+                    </div>
+                    <button
+                        class="w-full py-2.5 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all text-sm">
+                        مشاهده و ارسال رزومه
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- how it work? -->
+
+    <section class="py-16 bg-blue-50 dark:bg-[#15202b]">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-[#111418] dark:text-white">چگونه کار میکند؟</h2>
+            <div class="relative grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- line connector (desktop) -->
+                <div
+                    class="hidden md:block absolute top-12 right-[16%] left-[16%] h-0.5 border-t-2 border-dashed border-gray-300 border-gray-600  z-0">
+                </div>
+                <!-- step 1 -->
+                <div class="relative z-10 flex flex-col items-center">
+                    <div
+                        class="size-24 rounded-full bg-white dark:bg-[#1a2632] shadow-lg flex items-center justify-center mb-6 text-primary border-4 border-blue-100 dark:border-blue-900 ">
+                        <span class="material-symbols-outlined text-4xl">person_add</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">1.ساخت پروفایل</h3>
+                    <p class="text-gray-500 dark:text-gray-400 max-w-xs">رزومه خود را بسازید یا آپلود کنید و مهارت های
+                        خود را تکمیل کنید</p>
+                </div>
+                <!-- step 2 -->
+                <div class="relative z-10 flex flex-col items-center">
+                    <div
+                        class="size-24 rounded-full bg-white dark:bg-[#1a2632] shadow-lg flex items-center justify-center mb-6 text-primary border-4 border-blue-100 dark:border-blue-900 ">
+                        <span class="material-symbols-outlined text-4xl">search</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">2.جست و جوی شغل</h3>
+                    <p class="text-gray-500 dark:text-gray-400 max-w-xs">در بین هزاران آگهی جست وجو کنید.</p>
+                </div>
+                <!-- step 3 -->
+                <div class="relative z-10 flex flex-col items-center">
+                    <div
+                        class="size-24 rounded-full bg-white dark:bg-[#1a2632] shadow-lg flex items-center justify-center mb-6 text-primary border-4 border-blue-100 dark:border-blue-900 ">
+                        <span class="material-symbols-outlined text-4xl">handshake</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">3.اسخدام شوید</h3>
+                    <p class="text-gray-500 dark:text-gray-400 max-w-xs">درخواست دهید،مصاحبه کنید و شغل رویایی خود را
+                        بدست آورید.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Jobs List -->
+    <section class="py-16 bg-background-light dark:bg-background-dark">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold mb-8 text-[#111418] dark:text-white">جدیدترین آگهی ها</h2>
+            <div class="flex flex-col gap-4">
+                <!-- job item 1 -->
+                <div
+                    class="bg-white dark:bg-[#1a2632] p-4 md:p-6 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row items-start md:items-center gap-4">
+                    <div
+                        class="size-16 rounded-lg bg-gray-50 dark:bg-gray-800 shrink-0 flex items-center justify-center border border-gray-100 dark:border-gray-700">
+                        <img class="size-10 object-contain rounded-md"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiyIYDRlRgNOKFVXlsiF1d6uofo3n1lpFG7lAc8BZIvzPD2evdrmeZKDiYhY1iP36qPNMrdjo3A3MAfbJAiVb8TlVR6vjD2muNL_nGKTYUBxtV9Uf7iUCq9wM4VVwbomePqgM7pVdjkymopqoi4k6nJVitdXB2t37oWx6UMVcvnFdb-ZS5vR5lbIunq3CrKSDh45wOhHEdBBPVNHZngcLP92EYEYbsCi7nbT2XdjkNxoH9xJ6VTeuuZInHkXEwmbrwy0EZcs0XtF8" />
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-lg text-[#111418] dark:text-white mb-1">کارشناس تولید محتوا
+                        </h3>
+                        <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-gray-500 dark:text-gray-400">
+                            <span class="flex items-center gap-1">
+                                <span class="material-symbols-outlined text-xs">apartment</span> شرکت دیجی‌تک
+                            </span>
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-xs">location_on</span> تهران، جردن</span>
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-xs">schedule</span> ۳ ساعت پیش</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row  items-center gap-3 w-full md:w-auto mt-2 md:mt-0 ">
+                        <span class="font-medium text-gray-700 dark:text-gray-300">۱۲ - ۱۵ میلیون</span>
+                        <button
+                            class="bg-primary/10 hover:bg-primary hover:text-white text-primary font-bold py-2 px-6 rounded-lg transition-colors w-full sm:w-auto text-sm">ارسال
+                            سریع</button>
+                    </div>
+                </div>
+                <!-- Job Item 2 -->
+                <div
+                    class="bg-white dark:bg-[#1a2632] p-4 md:p-6 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row items-start md:items-center gap-4">
+                    <div
+                        class="size-16 rounded-lg bg-gray-50 dark:bg-gray-800 flex-shrink-0 flex items-center justify-center border border-gray-100 dark:border-gray-700">
+                        <img class="w-10 h-10 object-contain mix-blend-multiply dark:mix-blend-normal rounded-md"
+                            data-alt="Generic Company Logo 2"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-YD_xRlj_Qd0Euag2p2icBmRvYCFpG2klths8nCNam3unpZUn5n5ulNtiEn6c5IKoPT-UHZk7yNtNyyp4e9jxar0NjM5asGmkSMM9JWU-ISng8hAx0I45zEbZGnwrlyQOzkyxGrctF2lv39fyyoMvhTuUebhdN7bR8qXGq7tkcvKyW4Fdyyq0bn9zbtkpjr8-B05hR48WzxPSOnCtTNu2eBfPVwXzhMEfkuWe1BYgOIUwgJzoRlSKwpWRyXxxNrZ5pctHBVuhGuQ" />
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-lg text-[#111418] dark:text-white mb-1">حسابدار صنعتی</h3>
+                        <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-gray-500 dark:text-gray-400">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-xs">apartment</span> گروه صنعتی فولاد</span>
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-xs">location_on</span> اصفهان</span>
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-xs">schedule</span> ۵ ساعت پیش</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto mt-2 md:mt-0">
+                        <span class="font-medium text-gray-700 dark:text-gray-300">۲۵ - ۳۰ میلیون</span>
+                        <button
+                            class="bg-primary/10 hover:bg-primary hover:text-white text-primary font-bold py-2 px-6 rounded-lg transition-colors w-full sm:w-auto text-sm">
+                            ارسال سریع
+                        </button>
+                    </div>
+                </div>
+                <!-- Job Item 3 -->
+                <div
+                    class="bg-white dark:bg-[#1a2632] p-4 md:p-6 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row items-start md:items-center gap-4">
+                    <div
+                        class="size-16 rounded-lg bg-gray-50 dark:bg-gray-800 flex-shrink-0 flex items-center justify-center border border-gray-100 dark:border-gray-700">
+                        <img class="w-10 h-10 object-contain mix-blend-multiply dark:mix-blend-normal rounded-md"
+                            data-alt="Generic Company Logo 3"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbH2EL7c_K-U7mlhs67B9Hn2NnhpiPHrhkjfp92TLJvmbRTUjuSeM4gGsEnxgJi4t0ef1WgbfrAEw_Ux4d__V9g5Voy_xZ9HSik_YFtmqyGBFp7uDfgSurT5ZHiC1nT38sJd7lnCYgBsoGm-xdwAo1ScZGrBFe7i5Wdj5tqrMPMkhTMXuyQTm_RyKEpuoEOTLU5mDI-LSNUkM9jBKesbRCR4NfC5G2b4fZVbHbTWz-2LWWfAwc_tlEDHQ0yvOx8r10muChJaMAQjc" />
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-lg text-[#111418] dark:text-white mb-1">ادمین اینستاگرام</h3>
+                        <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-gray-500 dark:text-gray-400">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-xs">apartment</span> فروشگاه آنلاین مد</span>
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-xs">location_on</span> دورکاری</span>
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-xs">schedule</span> امروز</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto mt-2 md:mt-0">
+                        <span class="font-medium text-gray-700 dark:text-gray-300">۱۰ - ۱۲ میلیون</span>
+                        <button
+                            class="bg-primary/10 hover:bg-primary hover:text-white text-primary font-bold py-2 px-6 rounded-lg transition-colors w-full sm:w-auto text-sm">
+                            ارسال سریع
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-9 text-center">
+                <button
+                    class="text-gray-600 dark:text-gray-300 font-medium hover:text-primary transition-colors flex items-center gap-2 mx-auto">مشاهده
+                    همه آگهی‌ها
+                    <span class="material-symbols-outlined text-lg">arrow_back</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Top Employers -->
+    <section class="py-12 bg-white dark:bg-[#1f2b37] border-y border-gray-100 dark:border-gray-700 ">
+        <div class="max-w-[1280px] mx-auto px-4 mb-6">
+            <h2 class="text-xl font-bold text-center text-gray-500 dark:text-gray-400">شرکت‌های برتری که به ما اعتماد
+                دارند</h2>
+        </div>
+        <div class="flex gap-12 items-center px-4 justify-center flex-wrap opacity-70">
+            <div class="flex items-center gap-2 text-xl font-bold text-gray-400">
+                <span class="material-symbols-outlined text-4xl">local_shipping</span> Digikala
+            </div>
+            <div class="flex items-center gap-2 text-xl font-bold text-gray-400 font-sans">
+                <span class="material-symbols-outlined text-4xl">directions_car</span> Snapp
+            </div>
+            <div class="flex items-center gap-2 text-xl font-bold text-gray-400 font-sans">
+                <span class="material-symbols-outlined text-4xl">movie</span> Filimo
+            </div>
+            <div class="flex items-center gap-2 text-xl font-bold text-gray-400 font-sans">
+                <span class="material-symbols-outlined text-4xl">restaurant</span> CafeBazaar
+            </div>
+            <div class="flex items-center gap-2 text-xl font-bold text-gray-400 font-sans">
+                <span class="material-symbols-outlined text-4xl">flight</span> Alibaba
+            </div>
+            <div class="flex items-center gap-2 text-xl font-bold text-gray-400 font-sans">
+                <span class="material-symbols-outlined text-4xl">payments</span> Divar
+            </div>
+        </div>
+    </section>
+    <!-- Dual CTA -->
+    <section class="py-16 bg-background-light dark:bg-background-dark">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- 1 -->
+                <div
+                    class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-white relative flex flex-col justify-between h-80">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">کارجو هستید؟</h2>
+                        <p class="text-blue-100 mb-8 max-w-md text-lg">با ساخت رزومه حرفه‌ای در کمتر از ۵ دقیقه، شانس
+                            استخدام خود را دو برابر کنید.</p>
+                        <button
+                            class="bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-lg shadow-lg transition-colors">ساخت
+                            رزومه آنلاین</button>
+                    </div>
+                    <div class="absolute -bottom-10 -left-10 size-48 bg-white/10 rounded-full blur-2xl"></div>
+                    <div class="absolute top-10 -right-10 size-32 bg-white/10 rounded-full blur-2xl"></div>
+                </div>
+                <!-- 2 -->
+                <div
+                    class="bg-white dark:bg-[#1a2632] border border-gray-200 dark:border-gray-700 rounded-2xl p-8 md:p-12 relative flex flex-col justify-between h-80">
+                    <div class="relative z-10">
+                        <h2 class="text-3xl font-bold mb-4 text-[#111418] dark:text-white">کارفرما هستید؟</h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-md text-lg"> به جمع ۱۰,۰۰۰ شرکت برتر
+                            بپیوندید و بهترین استعدادها را استخدام کنید.</p>
+                        <button
+                            class="bg-gray-900 dark:bg-gray-700 hover:bg-gray-800 dark:hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-colors">ثبت
+                            شرکت و آگهی</button>
+                    </div>
+                    <span
+                        class="material-symbols-outlined absolute -bottom-4 left-4 !text-[180px] text-gray-50 dark:text-gray-800 opacity-50 rotate-12">apartment</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section -->
+    <section class="py-16 bg-white dark:bg-[#1a2632]">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold text-[#111418] dark:text-white">مجله شغلی و آموزشی</h2>
+                <a href="#" class="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">
+                    مشاهده همه مقالات
+                    <span class="material-symbols-outlined text-sm">arrow_back</span>
+                </a>
+
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="flex flex-col group cursor-pointer">
+                    <div class="overflow-hidden rounded-xl mb-4 h-56">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuANDCUCF_4ZFBFqZZTxYSpmBcXEpEKOG2gN7efxYNT1ViJPjIMOmL6FQG8JltpRPgzcmNNDDAMCYSvS5xJs6Vox6POS0totC-h5NDUyJYfNryZ5402cvCaSTZf8YyIS28nYL2QGowet3ataTkNhmgbW7XAMNry0dwE5VQFrUdIbyP5L8zuDFZAa97UGUaZ9KT49v9EG8-MPfBio_oboIr7FBqmHXfuuTvfWaEFOB0YTaIg9P1uh3ZDcbqK2B2IrY4ChB4-DzjHae98" />
+                    </div>
+                    <div class="flex gap-2 mb-2">
+                        <span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded">مصاحبه
+                            شغلی</span>
+                        <span class="text-xs text-gray-500 mt-1">۵ دقیقه مطالعه</span>
+                    </div>
+                    <h3
+                        class="font-bold text-xl mb-2 text-[#111418] dark:text-white group-hover:text-primary transition-colors">
+                        سوالات متداول در مصاحبه های استخدامی ۱۴۰۴</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm line-clamp-2">در این مقاله به بررسی مهم‌ترین
+                        سوالاتی که کارفرمایان در سال جدید می‌پرسند می‌پردازیم و بهترین پاسخ‌ها را بررسی می‌کنیم.</p>
+                </article>
+                <!-- Article 2 -->
+                <article class="flex flex-col group cursor-pointer">
+                    <div class="overflow-hidden rounded-xl mb-4 h-56">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZRrJPy-NYc7NzZKfpicJ6kyPF4fCSfQeUETCPTF5Mc-9ot769CR8UhA0Scn7G5vAFD7mjIUDBYDmTmSHwNgwXiT9EdwGpa0MG_h4JM1g3mYQQPysVhwH6-Z2jWb00A80smLJX2vzMsReBlMiNuij6kukDLyG5HMjob-gDwRNYICMWIqw3KaIaCIBVCwc3s-x32RD0YGyvNm0k_86ds8sh317j2QPVWbZlK_4hDwIgzDx4yP3hx5c3BatP11yUsDQqHB4Pi7PFTrI" />
+                    </div>
+                    <div class="flex gap-2 mb-2">
+                        <span
+                            class="text-xs font-semibold text-green-600 bg-green-100 dark:bg-green-900/30 px-2 py-1 rounded">رزومه
+                            نویسی</span>
+                        <span class="text-xs text-gray-500 mt-1">۷ دقیقه مطالعه</span>
+                    </div>
+                    <h3
+                        class="font-bold text-xl mb-2 text-[#111418] dark:text-white group-hover:text-primary transition-colors">
+                        چگونه یک رزومه استاندارد برای شرکت‌های تکنولوژی بنویسیم؟</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm line-clamp-2">نکات کلیدی برای نوشتن رزومه‌ای که
+                        از سیستم‌های ATS عبور کند و نظر مدیران فنی را جلب نماید.</p>
+                </article>
+                <!-- Article 3 -->
+                <article class="flex flex-col group cursor-pointer">
+                    <div class="overflow-hidden rounded-xl mb-4 h-56">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAcsdm2ASnY2TO3OCcDDFLZKlpAGjOLOI-GCOsRUfY3-rpZa978WgVHbH5x7n9Ps0k890JF4zl4F8gNKkaDm3vdxcmTe2uk0S0wFOy9ud1yzndI2SIYXw8uyl_4PEbGMEAiR4APpUC1kqrNKG213y0ofILh9C8YEnJjHVfiaCOyiDcWfXLxAQ0-PZn8gefnycSAShkK7pcQ9NiToViCPGc7m50B-UBNXNF-T2jdsO6f_-Cz8iyoemUAHZ7nJrICYeyqaXf2jb4YOs" />
+                    </div>
+                    <div class="flex gap-2 mb-2">
+                        <span
+                            class="text-xs font-semibold text-purple-600 bg-purple-100 dark:bg-purple-900/30 px-2 py-1 rounded">توسعه
+                            فردی</span>
+                        <span class="text-xs text-gray-500 mt-1">۴ دقیقه مطالعه</span>
+                    </div>
+                    <h3
+                        class="font-bold text-xl mb-2 text-[#111418] dark:text-white group-hover:text-primary transition-colors">
+                        مهارت‌های نرم که شما را متمایز می‌کند</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm line-clamp-2">علاوه بر مهارت‌های فنی، چه
+                        ویژگی‌های شخصیتی باعث موفقیت شغلی شما در محیط کار مدرن می‌شود؟</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-background-light dark:bg-background-dark pt-16 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 ">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Brand & Description -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined">work</span>
+                        </div>
+                        <span class="text-xl font-bold text-[#111418] dark:text-white">جاب فایندر</span>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">جاب‌فایندر پلتفرمی برای اتصال کارجویان با
+                        استعداد به شرکت‌های پیشرو است. هدف ما تسهیل فرآیند استخدام و ایجاد فرصت‌های برابر برای همه است.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="text-gray-400 hover:text-primary" href="#"><i
+                                class="material-symbols-outlined">public</i></a>
+                        <a class="text-gray-400 hover:text-primary" href="#"><i
+                                class="material-symbols-outlined">mail</i></a>
+                        <a class="text-gray-400 hover:text-primary" href="#"><i
+                                class="material-symbols-outlined">send</i></a>
+                    </div>
+                </div>
+                <!-- links column 1 -->
+                <div>
+                    <h4 class="font-bold text-[#111418] dark:text-white mb-6">کارجویان</h4>
+                    <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                        <li><a href="#" class="hover:text-primary transition-colors">جستجوی مشاغل</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">ساخت رزومه</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">شرکت‌های برتر</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">ماشین حساب حقوق</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">آزمون‌های شخصیت‌شناسی</a></li>
+                    </ul>
+                </div>
+                <!-- Links Column 2 -->
+                <div>
+                    <h4 class="font-bold text-[#111418] dark:text-white mb-6">کارفرمایان</h4>
+                    <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                        <li><a class="hover:text-primary transition-colors" href="#">درج آگهی استخدام</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">جستجوی رزومه</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">تعرفه‌ها</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">نرم‌افزار جذب و استخدام (ATS)</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- App Download -->
+                <div>
+                    <h4 class="font-bold text-[#111418] dark:text-white mb-6">دانلود اپلیکیشن</h4>
+                    <div class="flex flex-col gap-3 mb-8">
+                        <button
+                            class="flex items-center gap-3 bg-gray-900 dark:bg-white dark:text-black text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">
+                            <span class="material-symbols-outlined text-3xl">android</span>
+                            <div class="flex flex-col items-start">
+                                <span class="text-[10px] uppercase">Get it from</span>
+                                <span class="text-sm font-bold">Cafe Bazaar</span>
+                            </div>
+                        </button>
+                        <button
+                            class="flex items-center gap-3 bg-gray-900 dark:bg-white dark:text-black text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">
+                            <span class="material-symbols-outlined text-3xl">ios</span>
+                            <div class="flex flex-col items-start">
+                                <span class="text-[10px] uppercase">Download on the</span>
+                                <span class="text-sm font-bold">App Store</span>
+                            </div>
+                        </button>
+                    </div>
+                    <!-- Enamad -->
+                    <div
+                        class="bg-white p-2 rounded-lg border border-gray-200 size-24 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-4xl text-blue-600 !text-[36px]">verified_user</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-200 dark:border-gray-800 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-4">
+                <p>تمامی حقوق برای جاب‌فایندر محفوظ است © ۱۴۰۴</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-gray-800 dark:hover:text-gray-300">قوانین و مقررات</a>
+                    <a class="hover:text-gray-800 dark:hover:text-gray-300" href="#">حریم خصوصی</a>
+                    <a class="hover:text-gray-800 dark:hover:text-gray-300" href="#">تماس با ما</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
